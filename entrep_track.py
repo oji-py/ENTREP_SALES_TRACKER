@@ -28,8 +28,6 @@ st.write(sales_list)
 if submit:
     st.write(customer_name, order_choice, num_order)
     sales_dict = {"Name": customer_name, "Item": item, "No. of items": num_order, "Total amount": total_amount}
-    st.write(sales_dict)
     sales_entry = sales_list.append(sales_dict, ignore_index=True)
-    st.write(sales_entry)
     sales_entry.to_csv("entrep_.csv", index=False)
     
