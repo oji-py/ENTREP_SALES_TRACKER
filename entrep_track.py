@@ -24,10 +24,9 @@ submit = entry_form.form_submit_button("Submit")
 # List
 sales_list = pd.read_csv("entrep_.csv")
 st.header("Sales Tracker")
-st.write(sales_list)
 if submit:
-    st.write(customer_name, order_choice, num_order)
     sales_dict = {"Name": customer_name, "Item": item, "No. of items": num_order, "Total amount": total_amount}
     sales_entry = sales_list.append(sales_dict, ignore_index=True)
     sales_entry.to_csv("entrep_.csv", index=False)
+    st.write(sales_list)
     
