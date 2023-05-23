@@ -31,4 +31,6 @@ if submit:
     sales_dict = {"Name": customer_name, "Item": item, "No. of items": num_order, "Total amount": total_amount}
     sales_entry = sales_list.append(sales_dict, ignore_index=True)
     sales_entry.to_csv("entrep_.csv", index=False)
+    st.write(sales_list)
+
     
